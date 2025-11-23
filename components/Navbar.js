@@ -15,7 +15,7 @@ export default function Navbar() {
       : "static";
 
   return (
-    <div className={`w-full flex justify-center pt-10 bg-gray-100 pb-4 ${navClass}`}>
+    <div className={`w-full flex justify-center pt-10 bg-[#FBFBFB] pb-4 ${navClass}`}>
       <button
         onClick={() => router.push("/about")}
         className="flex items-center gap-3 px-6 py-3 rounded-full text-sm bg-white border border-gray-300 shadow-[0_1px_4px_rgba(0,0,0,0.08)] hover:shadow-[0_2px_6px_rgba(0,0,0,0.15)] hover:bg-white transition"
