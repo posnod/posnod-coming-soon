@@ -2,23 +2,26 @@
   "name": "Posnod | The System Learning",
   "short_name": "Posnod",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "description": "Posnod adalah platform pembelajaran sistem modern dan cepat.",
+
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/images/Favicon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/images/Favicon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/maskable-icon.png",
+      "src": "/images/Favicon-maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

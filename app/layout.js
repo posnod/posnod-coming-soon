@@ -77,7 +77,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Manifest PWA */}
+        <link rel="manifest" href="/manifest.json" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/images/Favicon-192.png" />
+
+        {/* Theme for mobile */}
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+      </head>
+
       <body>{children}</body>
     </html>
   );
 }
+
