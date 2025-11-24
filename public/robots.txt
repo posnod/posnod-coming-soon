@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+Disallow: /_next/
+
+# Sitemap
 Sitemap: https://posnod.com/sitemap.xml
