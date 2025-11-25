@@ -2,17 +2,13 @@ import './global.css';
 
 export const metadata = {
   metadataBase: new URL('https://posnod.com'),
-
   title: {
     default: 'Posnod | The System Learning',
     template: '%s | Posnod'
   },
-
   description:
     'Posnod adalah platform pembelajaran sistem yang modern, cepat, dan mudah digunakan.',
-
   applicationName: 'Posnod',
-
   keywords: [
     'Posnod',
     'System Learning',
@@ -20,7 +16,6 @@ export const metadata = {
     'Platform Edukasi',
     'Belajar Online'
   ],
-
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -29,10 +24,9 @@ export const metadata = {
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
-    ],
-    shortcut: ['/favicon.ico']
+    ]
+    // ✅ Hapus 'shortcut' — tidak diperlukan
   },
-
   openGraph: {
     title: 'Posnod | The System Learning',
     description: 'Platform pembelajaran sistem dengan pengalaman modern dan efisien.',
@@ -49,7 +43,6 @@ export const metadata = {
     locale: 'en_US',
     type: 'website'
   },
-
   twitter: {
     card: 'summary_large_image',
     title: 'Posnod | The System Learning',
@@ -57,7 +50,6 @@ export const metadata = {
     images: ['/og-image.png'],
     creator: '@posnod'
   },
-
   robots: {
     index: true,
     follow: true,
@@ -69,9 +61,7 @@ export const metadata = {
       maxSnippet: -1
     }
   },
-
   manifest: '/manifest.json',
-
   alternates: {
     canonical: 'https://posnod.com'
   }
@@ -81,7 +71,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/icon.png" />
+        {/* ⚠️ JANGAN tambahkan <link rel="icon"> manual di sini! */}
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
