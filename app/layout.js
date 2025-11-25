@@ -17,7 +17,15 @@ export const metadata = {
     'Belajar Online'
   ],
   icons: {
-    icon: '/favicon.ico'
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+    ]
+    // ✅ Hapus 'shortcut' — tidak diperlukan
   },
   openGraph: {
     title: 'Posnod | The System Learning',
@@ -63,6 +71,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* ⚠️ JANGAN tambahkan <link rel="icon"> manual di sini! */}
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
