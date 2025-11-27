@@ -1,7 +1,7 @@
 {
   "name": "Posnod - Social Learning Platform",
   "short_name": "Posnod",
-  "description": "Platform pembelajaran sosial yang menyediakan pondasi modern.",
+  "description": "Platform pembelajaran sosial yang menyediakan pondasi modern untuk belajar, berbagi pengetahuan, dan berkolaborasi.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
