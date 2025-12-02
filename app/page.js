@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
 
 // Fungsi mengambil inisial dari email
 function getInitials(email) {
   if (!email) return "?";
-    const name = email.split("@")[0];
+  const name = email.split("@")[0];
   return name
     .split(/[._-]/)
     .map((part) => part[0]?.toUpperCase())
@@ -29,7 +30,11 @@ export default function AvatarSimulation() {
   ];
 
   const buttonText =
-    pathname === "/about" ? "Tentang Posnod" : "Apa itu Posnod?";
+    pathname === "/about"
+      ? "Tentang Posnod"
+      : pathname === "/timeline"
+      ? "Posnod Timeline"
+      : "Apa itu Posnod?";
 
   const isValidEmail = (value) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
@@ -82,12 +87,25 @@ export default function AvatarSimulation() {
           Daftar untuk menjadi yang pertama mencoba Posnod.
         </p>
 
-        <a
-          href="#"
-          className="text-[#4B3B72] text-[14px] md:text-[16px] mb-[70px] md:mb-10 block no-underline outline-none focus:underline"
-        >
-          Dapatkan Early Access
-        </a>
+        {/* Timeline */}
+        <div className="flex items-center gap-3 mb-[70px] md:mb-10">
+          <span className="text-[#4B3B72] text-[14px] md:text-[16px] select-none">
+            Bagaimana Posnod bekerja?
+          </span>
+
+          <Link
+            href="/timeline"
+            className="group inline-flex items-center justify-center rounded-full border border-gray-300 w-10 h-10 cursor-pointer transition-transform duration-200 hover:scale-110"
+          >
+            <Image
+              src="/icons/arrow 3.svg"
+              alt="arrow"
+              width={16}
+              height={16}
+              className="transition-transform duration-200 group-hover:scale-110"
+            />
+          </Link>
+        </div>
 
         {/* Form email */}
         <div className="max-w-sm md:max-w-2xl w-full flex flex-col md:flex-row items-center md:items-start justify-start gap-3 md:gap-4 mt-6 md:mt-8">
@@ -100,7 +118,7 @@ export default function AvatarSimulation() {
               onChange={(e) => setEmail(e.target.value)}
               className="outline-none bg-transparent text-left flex-1 text-xs md:text-sm min-w-[200px] md:min-w-[250px]"
             />
-
+            {/* Submit button */}
             <button
               disabled={!canSubmit}
               className={
