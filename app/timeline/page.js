@@ -55,7 +55,6 @@ export default function TimelineSection() {
       {/* Navbar */}
       <div className="w-full flex justify-center pt-20 bg-[#FBFBFB] pb-4 sm:static z-40">
         <div className="flex items-center gap-3 px-2 py-2 rounded-full text-sm border border-gray-300 bg-transpara">
-
           <span
             onClick={() => router.push("/")}
             className="w-[36px] h-[36px] rounded-full flex items-center justify-center bg-black transition hover:scale-110 hover:shadow-sm cursor-pointer"
@@ -75,37 +74,42 @@ export default function TimelineSection() {
       </div>
 
       {/* Content */}
-      <div className="w-full py-14 px-6 md:px-10 lg:px-20">
+      <div className="w-full py-14 px-6 md:px-10 lg:px-20 mt-[-20px]">
         <h2 className="text-[28px] sm:text-[38px] md:text-4xl font-normal mb-16 sm:mb-[90px] text-center">
           Arsitektur pembelajaran sosial
         </h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {items.map((item, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-3xl border border-gray-200 py-14 px-6 flex flex-col items-start"
-            >
-              <div className="w-full flex justify-center mb-6">
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  width={433}
-                  height={244}
-                  className="object-contain"
-                />
+        <div className="max-w-[958px] mx-auto mt-[-30px] px-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+            {items.map((item, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-3xl border border-gray-200 py-[85px] px-[35px] flex flex-col items-start w-full h-[461px]"
+              >
+                {/* Gambar */}
+                <div className="w-full flex justify-center mb-6">
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    width={434}
+                    height={244}
+                    className="object-contain"
+                  />
+                </div>
+
+                {/* Judul */}
+                <h3 className="text-xl font-normal text-gray-800 mb-2">
+                  {item.title}
+                </h3>
+
+                {/* Deskripsi */}
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
-
-              <h3 className="text-xl font-normal text-gray-800 mb-2">
-                {item.title}
-              </h3>
-
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
