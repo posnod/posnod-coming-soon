@@ -98,7 +98,7 @@ export default function AvatarSimulation() {
             className="group inline-flex items-center justify-center rounded-full border border-gray-300 w-10 h-10 cursor-pointer transition-transform duration-200 hover:scale-110"
           >
             <Image
-              src="/icons/arrow 3.svg"
+              src="/icons/Arrow 3.svg"
               alt="arrow"
               width={16}
               height={16}
